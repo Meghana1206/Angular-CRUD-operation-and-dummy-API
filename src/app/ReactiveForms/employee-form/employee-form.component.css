@@ -1,0 +1,8 @@
+*{
+	margin:5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}

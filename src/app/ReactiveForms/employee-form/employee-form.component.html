@@ -1,0 +1,46 @@
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="form-group">
+          <label>
+            ID:
+            <input formControlName="id"  placeholder="Your ID" />
+          </label>
+          <span style="color: red;" *ngIf=" myForm.get('id')?.hasError('required') || myForm.get('id')?.touched">*Required</span>
+        
+        </div>
+        <div class="form-group">
+          <label>
+            Employee Name:
+            <input formControlName="name" placeholder="Your Employee Name" />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            Employee Salary:
+            <input
+              formControlName="salary"
+              placeholder="Your Employee Salary"
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            Employee Age:
+            <input formControlName="age" placeholder="Your Employee age" />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            Profile Pic :
+            <input formControlName="pic" />
+          </label>
+        </div>
+        <div class="form-group" >
+          <button (click)="PostEmployees()" class="btn btn-primary"  type="submit">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
